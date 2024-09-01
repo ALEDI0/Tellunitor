@@ -1,21 +1,9 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Stack } from 'expo-router';
 
-const RootLayout = () => {
+export default function RootLayout() {
     return (
-        <View style={styles.container}>
-            <Text>Root Layout Component</Text>
-        </View>
+        <Stack>
+            <Stack.Screen name="(tabs)" />
+        </Stack>
     );
-};
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#fff',
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-});
-
-export default RootLayout;
+}
